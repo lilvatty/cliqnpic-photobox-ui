@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+}
+
+.container{
+    display: flex;
+    height: 100vh;
+    gap: 20px;
+    background-color: rgb(240, 240, 240);
+    overflow: hidden;
+}
+
+.selectedTemplate{
+    width: 700px;
+    margin: 20px 0 20px 20px ;
+    background-color: rgb(245, 245, 245);
+    border-radius: 20px;
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
+}
+
+.displayTemplate{
+    position: relative;
+    width: 100%;
+    margin: 20px 20px 20px 0;
+    background-color: rgb(245, 245, 245);
+    border-radius: 20px;
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
+}
+
+.displayCategory{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.categoryContainer{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    gap: 30px;
+    flex-wrap: wrap;
+    padding: 20px 30px 30px 30px;
+    overflow-y: scroll;
+}
+
+.displayContent{
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+}
+
+#headerCategory, #headerTemplate{
+    margin: 50px 0 50px 0;
+    font-size: 40px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+.category{
+    cursor: pointer;
+    position: relative;
+    left: 140px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    background-color: rgb(248, 248, 248);
+    box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    height: 300px;
+    border-radius: 10px;
+}
+
+.category i{
+    position: relative;
+    bottom: 30px;
+    background-color: white;
+    color: black;
+    padding: 20px;
+    border-radius: 9999px;
+    font-size: 40px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+}
+
+.category p{
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0 0 10px 10px;
+    background-color: white;
+    width: 100%;
+    height: 80px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.gallery{
+    position: relative;
+    left: 25px;
+    padding: 0 10px 0px 10px;
+    height: 750px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    overflow-y: scroll;
+}
+
+.gallery img{
+    cursor: pointer;
+    width: 240px;
+    object-fit: cover;
+    padding: 3px;
+    transition: all 0.3s ease;
+}
+
+.gallery img.selected {
+    border: 7px solid rgba(76, 87, 247, 0.993);
+    border-radius: 10px;
+}
+
+.gallery img:active{
+    transform: translate(2px, 2px);
+}
+
+.selectedContent{
+    position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    padding: 25px;
+}
+
+#takePhotoBtn{
+    position: absolute;
+    top: 50px;
+    width: 90%;
+    height: 80px;
+    background-color: #fbeee0;
+    border: 2px solid #422800;
+    box-shadow: #292929 4px 4px 0 0;
+    color: #292929;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: 800;
+    font-size: 1.8rem;
+    line-height: 50px;
+    letter-spacing: 1px;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+#takePhotoBtn:active{
+    box-shadow: #292929 2px 2px 0 0;
+    transform: translate(2px, 2px);
+}
+
+#selectedImageContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.selectedContent img{
+    position: relative;
+    top: 50px;
+    width: 100%;
+}
+
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 25px;
+    height: 100px;
+    width: 90%;
+    border-radius: 15px;
+    text-align: center;
+    font-size: 28px;
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.1);
+}
+
+#backIcon{
+    position: absolute;
+    cursor: pointer;
+    left: 40px;
+    top: 35px;
+    width: 35px;
+}
+
+#backIcon:active{
+    transform: translate(2px, 2px);
+}

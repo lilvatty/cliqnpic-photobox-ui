@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>photobooth | cliqnpic</title>
+    <link rel="stylesheet" href="start-photo.css">
+    <script src="https://kit.fontawesome.com/c4cefc0e97.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <div class="container">
+        <div class="app">
+            <div id="cameraView">
+                <video id="video" autoplay></video>
+                <button id="captureButton">START PHOTO</button>
+            </div>
+            <canvas id="canvas"></canvas>
+            <div id="photos"></div>
+            <div class="countdown">
+                <p id="countdown"></p>
+            </div>
+            <div class="displayPhotoContainer">
+                <div id="displayPhoto1" class="displayPhoto" >
+                    <p class="photoPlaceholder">1</p>
+                    <img id="photo1">
+                </div>
+                <div id="displayPhoto2" class="displayPhoto" >
+                    <p class="photoPlaceholder">2</p>
+                    <img id="photo2">
+                </div>
+                <div id="displayPhoto3" class="displayPhoto" >
+                    <p class="photoPlaceholder">3</p>
+                    <img id="photo3">
+                </div>
+                <div id="displayPhoto4" class="displayPhoto" >
+                    <p class="photoPlaceholder">4</p>
+                    <img id="photo4">
+                </div>
+            </div>
+            <div id="controls">
+                <div class="retakeContainer">
+                    <i class="fa-solid fa-rotate-left" id="retakeButton"></i>
+                    <p>retake</p>
+                </div>
+                <div class="nextContainer">
+                    <i class="fa-solid fa-check" id="nextButton"></i>
+                    <p>next</p>
+                </div>
+            </div>
+            <i id="loading" class="fa-solid fa-spinner fa-spin-pulse"></i>
+        </div>
+    </div>
+    
+    <script src="start-photo.js"></script>
+</body>
+</html>

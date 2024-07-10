@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>photobooth | cliqnpic</title>
+    <link rel="stylesheet" href="template.css">
+    <script src="https://kit.fontawesome.com/c4cefc0e97.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    
+    <div class="container">
+
+        <div class="selectedTemplate">
+            <div class="selectedContent">
+                <div id="selectedImageContainer">
+                    <img id="selectedImage">
+                </div>
+                <button id="takePhotoBtn" type="button">START PHOTO</button>
+            </div>
+        </div>
+
+        <div class="displayTemplate">
+            
+            <div class="displayCategory">
+                <h1 id="headerCategory">TEMPLATE CATEGORY</h1>
+                <div class="categoryContainer">
+
+                </div>
+            </div>
+            
+            <div class="displayContent">
+                <h1 id="headerTemplate">SELECT TEMPLATE</h1>
+                <img id="backIcon" src="../assets/icon/back.svg">
+                <div class="gallery">
+                    <img src="../assets/image/1.png" onclick="selectImage(this)">
+                    <img src="../assets/image/2.png" onclick="selectImage(this)">
+                    <img src="../assets/image/3.png" onclick="selectImage(this)">
+                    <img src="../assets/image/4.png" onclick="selectImage(this)">
+                    <img src="../assets/image/5.png" onclick="selectImage(this)">
+                    <img src="../assets/image/6.png" onclick="selectImage(this)">
+                    <img src="../assets/image/7.png" onclick="selectImage(this)">
+                    <img src="../assets/image/8.png" onclick="selectImage(this)">
+                    <img src="../assets/image/9.png" onclick="selectImage(this)">
+                    <img src="../assets/image/10.png" onclick="selectImage(this)">
+                    <img src="../assets/image/11.png" onclick="selectImage(this)">
+                    <img src="../assets/image/12.png" onclick="selectImage(this)">
+                    <img src="../assets/image/13.png" onclick="selectImage(this)">
+                    <img src="../assets/image/14.png" onclick="selectImage(this)">
+                    <img src="../assets/image/15.png" onclick="selectImage(this)">
+                </div>
+            </div>
+        </div>
+
+    </div>
+    
+    <script src="template.js"></script>
+</body>
+</html>

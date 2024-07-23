@@ -9,6 +9,97 @@
 </head>
 <body>
     
+    <div class="container">
+
+        <h1 id="header">SELECT FILTER</h1>
+
+        <button id="nextBtn" onclick="nextBtn()">NEXT</button>
+        
+        <div class="resultImg">
+            <div id="img1" class="img img1">
+                <img src="../assets/image/photo1.JPG">
+                <img src="../assets/image/photo2.JPG">
+                <img src="../assets/image/photo3.JPG">
+                <img src="../assets/image/photo4.JPG">
+            </div>
+            <div id="img2" class="img img2">
+                <img src="../assets/image/photo4.JPG">
+                <img src="../assets/image/photo3.JPG">
+                <img src="../assets/image/photo2.JPG">
+                <img src="../assets/image/photo1.JPG">
+            </div>
+            <img id="template" src="../assets/image/10.png">
+        </div>
+
+        <div class="filterGalery">
+
+            <div class="card">
+                <div class="card-image">
+                    <img src="../assets/image/photo1.JPG" class="filterImg">
+                    <p class="filterLabel">Normal</p>
+                </div>
+                <div class="card-image">
+                    <img src="../assets/image/photo1.JPG" class="filterImg filter-1977">
+                    <p class="filterLabel">1977</p>
+                </div>
+                <div class="card-image">
+                    <img src="../assets/image/photo1.JPG" class="filterImg filter-aden">
+                    <p class="filterLabel">Aden</p>
+                </div>
+                <div class="card-image">
+                    <img src="../assets/image/photo1.JPG" class="filterImg filter-amaro">
+                    <p class="filterLabel">Amaroashby</p>
+                </div>
+                <div class="card-image">
+                    <img src="../assets/image/photo1.JPG" class="filterImg filter-ashby">
+                    <p class="filterLabel">Ashby</p>
+                </div>
+                <div class="card-image">
+                    <img src="../assets/image/photo1.JPG" class="filterImg filter-brannan">
+                    <p class="filterLabel">Brannan</p>
+                </div>
+                <div class="card-image">
+                    <img src="../assets/image/photo1.JPG" class="filterImg filter-brooklyn">
+                    <p class="filterLabel">Brooklyn</p>
+                </div>
+                <div class="card-image">
+                    <img src="../assets/image/photo1.JPG" class="filterImg filter-charmes">
+                    <p class="filterLabel">Charmes</p>
+                </div>
+                <div class="card-image">
+                    <img src="../assets/image/photo1.JPG" class="filterImg filter-clarendon">
+                    <p class="filterLabel">Clarendon</p>
+                </div>
+                <div class="card-image">
+                    <img src="../assets/image/photo1.JPG" class="filterImg filter-crema">
+                    <p class="filterLabel">Crema</p>
+                </div>
+                <div class="card-image">
+                    <img src="../assets/image/photo1.JPG" class="filterImg filter-dogpatch">
+                    <p class="filterLabel">Dogpatch</p>
+                </div>
+                <div class="card-image">
+                    <img src="../assets/image/photo1.JPG" class="filterImg filter-earlybird">
+                    <p class="filterLabel">Earlybird</p>
+                </div>
+                <div class="card-image">
+                    <img src="../assets/image/photo1.JPG" class="filterImg filter-gingham">
+                    <p class="filterLabel">Gingham</p>
+                </div>
+                <div class="card-image">
+                    <img src="../assets/image/photo1.JPG" class="filterImg filter-ginza">
+                    <p class="filterLabel">Ginza</p>
+                </div>
+            </div>
+            
+        </div>
+
+        <div class="loadingContainer">
+            <i id="loading" class="fa-solid fa-spinner fa-spin-pulse"></i>
+        </div>
+        
+    </div>
+    
     <script src="filter-page.js"></script>
 </body>
 </html>

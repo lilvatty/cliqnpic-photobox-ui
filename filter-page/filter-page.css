@@ -1,217 +1,241 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins';
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins";
 }
 
-.container{
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #ffffff;
-    height: 100vh;
+.container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #ffffff;
+  height: 100vh;
 }
 
-#header{
-    margin-top: 20px;
-    letter-spacing: 2px;
-    font-size: 40px;
-    font-weight: 700;
+#header {
+  margin-top: 20px;
+  letter-spacing: 2px;
+  font-size: 40px;
+  font-weight: 700;
 }
 
-#nextBtn{
-    position: absolute;
-    top: 50px;
-    right: 50px;
-    width: 200px;
-    background-color: #fbeee0;
-    border: 2px solid #422800;
-    border-radius: 30px;
-    box-shadow: #292929 4px 4px 0 0;
-    color: #292929;
-    cursor: pointer;
-    display: inline-block;
-    font-weight: 800;
-    font-size: 1.5rem;
-    padding: 0 18px;
-    line-height: 50px;
-    letter-spacing: 1px;
-    text-align: center;
-    text-decoration: none;
-    user-select: none;
-    -webkit-user-select: none;
-    touch-action: manipulation;
+#nextBtn {
+  position: absolute;
+  top: 50px;
+  right: 50px;
+  width: 200px;
+  background-color: #fbeee0;
+  border: 2px solid #422800;
+  border-radius: 30px;
+  box-shadow: #292929 4px 4px 0 0;
+  color: #292929;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 800;
+  font-size: 1.5rem;
+  padding: 0 18px;
+  line-height: 50px;
+  letter-spacing: 1px;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
 }
 
 #nextBtn:active {
-    box-shadow: #292929 2px 2px 0 0;
-    transform: translate(2px, 2px);
+  box-shadow: #292929 2px 2px 0 0;
+  transform: translate(2px, 2px);
 }
 
-.resultImg{
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
+.resultImg {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
 }
 
-.img1{
-    position: absolute;
-    display: flex;
-    gap: 8px;
-    top: 37px;
-    right: 4px;
-    flex-direction: column;
-    align-items: center;
+.img1 {
+  position: absolute;
+  display: flex;
+  gap: 3px;
+  top: 37px;
+  right: 4px;
+  flex-direction: column;
+  align-items: center;
 }
 
-.img2{
-    position: absolute;
-    display: flex;
-    gap: 8px;
-    top: 37px;
-    left: 4px;
-    flex-direction: column;
-    align-items: center;
+.img2 {
+  position: absolute;
+  display: flex;
+  gap: 3px;
+  top: 37px;
+  left: 4px;
+  flex-direction: column;
+  align-items: center;
 }
 
-.img img{
-    width: 200px;
+.img img {
+  width: 190px;
 }
 
-#template{
-    position: absolute;
-    top: 20px;
-    width: 420px;
+#template {
+  position: absolute;
+  top: 20px;
+  width: 390px;
 }
 
-.filterGalery{
-    position: absolute;
-    bottom: 20px;
-    width: 90%;
-    height: 210px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 10px;
-    box-shadow: rgba(0, 0, 0, 0.5) 3px 3px 8px;
+.filterGalery {
+  position: absolute;
+  bottom: 20px;
+  width: 90%;
+  height: 210px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.5) 3px 3px 8px;
 }
 
-.card{
-    overflow-x: scroll;
-    width: 98%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    border-radius: 10px 10px 0 0;
-    gap: 20px;
-    padding: 0 4px;
+.card {
+  overflow-x: scroll;
+  width: 98%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  border-radius: 10px 10px 0 0;
+  gap: 20px;
+  padding: 0 4px;
 }
 
-.card-image{
-    cursor: pointer;
-    background-color: #ffffff;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    border-radius: 10px;
-    box-shadow: rgba(0, 0, 0, 0.5) 3px 3px 8px;
-    transition: all 0.3s ease;
+.card-image {
+  cursor: pointer;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.5) 3px 3px 8px;
+  transition: all 0.3s ease;
 }
 
-.card-image:active{
-    transform: translate(1px, 2px);
+.card-image:active {
+  transform: translate(1px, 2px);
 }
 
 .selected {
-    outline: 3px solid rgba(76, 87, 247, 0.993);
+  outline: 3px solid rgba(76, 87, 247, 0.993);
 }
 
-.filterImg{
-    width: 200px;
-    border-radius: 10px 10px 0 0;
+.filterImg {
+  width: 200px;
+  border-radius: 10px 10px 0 0;
 }
 
-.filterLabel{
-    font-size: 18px;
-    padding: 10px;
-    font-weight: 500;
+.filterLabel {
+  font-size: 18px;
+  padding: 10px;
+  font-weight: 500;
 }
 
-.loadingContainer{
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    display: none;
-    align-items: center;
-    justify-content: center;
-    background-color: rgba(128, 128, 128, 0.5);
+.loadingContainer {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(128, 128, 128, 0.5);
 }
 
-#loading{
-    position: absolute;
-    display: flex;
-    font-size: 150px;
-    color: rgba(245, 245, 245, 0.8);
+#loading {
+  position: absolute;
+  display: flex;
+  font-size: 150px;
+  color: rgba(245, 245, 245, 0.8);
 }
-
-
-
 
 .filter-1977 {
-    filter: sepia(.5) hue-rotate(-30deg) saturate(1.4);
+  filter: sepia(0.5) hue-rotate(-30deg) saturate(1.4);
 }
 
 .filter-aden {
-    filter: sepia(.2) brightness(1.15) saturate(1.4);
+  filter: sepia(0.2) brightness(1.15) saturate(1.4);
 }
 
 .filter-amaro {
-    filter: sepia(.35) contrast(1.1) brightness(1.2) saturate(1.3);
+  filter: sepia(0.35) contrast(1.1) brightness(1.2) saturate(1.3);
 }
 
 .filter-ashby {
-    filter: sepia(.5) contrast(1.2) saturate(1.8);
+  filter: sepia(0.5) contrast(1.2) saturate(1.8);
 }
 
 .filter-brannan {
-    filter: sepia(.4) contrast(1.25) brightness(1.1) saturate(.9) hue-rotate(-2deg);
+  filter: sepia(0.4) contrast(1.25) brightness(1.1) saturate(0.9)
+    hue-rotate(-2deg);
 }
 
 .filter-brooklyn {
-    filter: sepia(.25) contrast(1.25) brightness(1.25) hue-rotate(5deg);
+  filter: sepia(0.25) contrast(1.25) brightness(1.25) hue-rotate(5deg);
 }
 
 .filter-charmes {
-    filter: sepia(.25) contrast(1.25) brightness(1.25) saturate(1.35) hue-rotate(-5deg);
+  filter: sepia(0.25) contrast(1.25) brightness(1.25) saturate(1.35)
+    hue-rotate(-5deg);
 }
 
 .filter-clarendon {
-    filter: sepia(.15) contrast(1.25) brightness(1.25) hue-rotate(5deg);
+  filter: sepia(0.15) contrast(1.25) brightness(1.25) hue-rotate(5deg);
 }
 
 .filter-crema {
-    filter: sepia(.5) contrast(1.25) brightness(1.15) saturate(.9) hue-rotate(-2deg);
+  filter: sepia(0.5) contrast(1.25) brightness(1.15) saturate(0.9)
+    hue-rotate(-2deg);
 }
 
 .filter-dogpatch {
-    filter: sepia(.35) saturate(1.1) contrast(1.5);
+  filter: sepia(0.35) saturate(1.1) contrast(1.5);
 }
 
 .filter-earlybird {
-    filter: sepia(.25) contrast(1.25) brightness(1.15) saturate(.9) hue-rotate(-5deg);
+  filter: sepia(0.25) contrast(1.25) brightness(1.15) saturate(0.9)
+    hue-rotate(-5deg);
 }
 
 .filter-gingham {
-    filter: contrast(1.1) brightness(1.1);
+  filter: contrast(1.1) brightness(1.1);
 }
 
 .filter-ginza {
-    filter: sepia(.25) contrast(1.15) brightness(1.2) saturate(1.35) hue-rotate(-5deg);
+  filter: sepia(0.25) contrast(1.15) brightness(1.2) saturate(1.35)
+    hue-rotate(-5deg);
+}
+
+@media (min-height: 1070px) {
+  #template {
+    width: 480px;
+  }
+
+  .img img {
+    width: 225px;
+  }
+
+  .img1 {
+    gap: 11px;
+    top: 40px;
+    right: 4px;
+  }
+
+  .img2 {
+    gap: 11px;
+    top: 40px;
+    left: 4px;
+  }
 }

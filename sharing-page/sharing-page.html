@@ -1,34 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>photobooth | cliqnpic</title>
-    <link rel="stylesheet" href="sharing-page.css">
-    <script src="https://kit.fontawesome.com/c4cefc0e97.js" crossorigin="anonymous"></script>
-</head>
-<body>
-    
+    <link rel="stylesheet" href="sharing-page.css" />
+    <script
+      src="https://kit.fontawesome.com/c4cefc0e97.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
     <div class="container">
-        <h1 id="header">SHARING PHOTO</h1>
+      <h1 id="header">SHARING PHOTO</h1>
 
-        <div class="resultImg">
-            <div id="img1" class="img img1">
-                <img src="../assets/image/photo1.JPG">
-                <img src="../assets/image/photo2.JPG">
-                <img src="../assets/image/photo3.JPG">
-                <img src="../assets/image/photo4.JPG">
-            </div>
-            <div id="img2" class="img img2">
-                <img src="../assets/image/photo4.JPG">
-                <img src="../assets/image/photo3.JPG">
-                <img src="../assets/image/photo2.JPG">
-                <img src="../assets/image/photo1.JPG">
-            </div>
-            <img id="template" src="../assets/image/10.png">
+      <div class="done">
+        <button id="doneBtn">DONE</button>
+      </div>
+
+      <div class="email">
+        <i class="fa-solid fa-envelope"></i>
+        <span>email</span>
+      </div>
+
+      <div class="resultImg">
+        <div id="img1" class="img img1">
+          <img src="../assets/image/photo1.JPG" />
+          <img src="../assets/image/photo2.JPG" />
+          <img src="../assets/image/photo3.JPG" />
+          <img src="../assets/image/photo4.JPG" />
         </div>
+        <div id="img2" class="img img2">
+          <img src="../assets/image/photo4.JPG" />
+          <img src="../assets/image/photo3.JPG" />
+          <img src="../assets/image/photo2.JPG" />
+          <img src="../assets/image/photo1.JPG" />
+        </div>
+        <img id="template" src="../assets/image/10.png" />
+      </div>
+      <div id="loadingBar" class="loading animation"></div>
     </div>
-    
+
     <script src="./sharing-page.js"></script>
-</body>
+  </body>
 </html>

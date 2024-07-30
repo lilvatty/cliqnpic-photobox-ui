@@ -179,7 +179,7 @@ canvas {
   height: 300px;
   border: 7px solid grey;
   border-radius: 99999px;
-  opacity: 0.2;
+  opacity: 0.8;
 }
 
 #countdown {

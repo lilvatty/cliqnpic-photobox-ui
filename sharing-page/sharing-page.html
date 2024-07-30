@@ -12,33 +12,76 @@
   </head>
   <body>
     <div class="container">
-      <h1 id="header">SHARING PHOTO</h1>
-
-      <div class="done">
-        <button id="doneBtn">DONE</button>
+      <div class="printAlert">
+        <span>Photo is being Printed..</span>
       </div>
 
-      <div class="email">
-        <i class="fa-solid fa-envelope"></i>
-        <span>email</span>
-      </div>
+      <div class="previewContainer">
+        <h1 id="header">SHARING PHOTO</h1>
 
-      <div class="resultImg">
-        <div id="img1" class="img img1">
-          <img src="../assets/image/photo1.JPG" />
-          <img src="../assets/image/photo2.JPG" />
-          <img src="../assets/image/photo3.JPG" />
-          <img src="../assets/image/photo4.JPG" />
+        <div class="done">
+          <button id="doneBtn">DONE</button>
         </div>
-        <div id="img2" class="img img2">
-          <img src="../assets/image/photo4.JPG" />
-          <img src="../assets/image/photo3.JPG" />
-          <img src="../assets/image/photo2.JPG" />
-          <img src="../assets/image/photo1.JPG" />
+
+        <div class="email">
+          <i class="fa-solid fa-envelope"></i>
+          <span>email</span>
         </div>
-        <img id="template" src="../assets/image/10.png" />
+
+        <div class="print">
+          <i class="fa-solid fa-print"></i>
+          <span>print</span>
+        </div>
+
+        <div class="resultImg">
+          <div id="img1" class="img img1">
+            <img src="../assets/image/photo1.JPG" />
+            <img src="../assets/image/photo2.JPG" />
+            <img src="../assets/image/photo3.JPG" />
+            <img src="../assets/image/photo4.JPG" />
+          </div>
+          <div id="img2" class="img img2">
+            <img src="../assets/image/photo4.JPG" />
+            <img src="../assets/image/photo3.JPG" />
+            <img src="../assets/image/photo2.JPG" />
+            <img src="../assets/image/photo1.JPG" />
+          </div>
+          <img id="template" src="../assets/image/10.png" />
+        </div>
+        <div id="loadingBar" class="loading animation"></div>
       </div>
-      <div id="loadingBar" class="loading animation"></div>
+
+      <div class="keyboardContainer">
+        <div class="inputContainer">
+          <i id="cancelBtn" class="fa-solid fa-xmark"></i>
+          <label for="keyboardShow">ENTER EMAIL</label>
+          <input type="text" id="keyboardShow" class="use-keyboard-input" />
+          <button id="sendBtn">SEND</button>
+        </div>
+        <div class="loadingContainer">
+          <div class="loadingCircle"></div>
+        </div>
+        <div class="notifContainer">
+          <div class="notifCard">
+            <span>Sending Email...</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="printContainer">
+        <div class="printCard">
+          <i id="cancelPrintBtn" class="fa-solid fa-xmark"></i>
+          <h2>HOW MANY PRINT</h2>
+          <div class="printControl">
+            <div class="plusMinContainer">
+              <i id="plusBtn" class="fa-solid fa-caret-up"></i>
+              <i id="minBtn" class="fa-solid fa-caret-down"></i>
+            </div>
+            <span id="totalPrint">1</span>
+          </div>
+          <button id="printSubmit">PRINT</button>
+        </div>
+      </div>
     </div>
 
     <script src="./sharing-page.js"></script>

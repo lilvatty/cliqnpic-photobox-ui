@@ -12,9 +12,20 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.previewContainer {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: space-evenly;
   background-color: #ffffff;
   height: 100vh;
+  width: 100%;
   overflow: hidden;
 }
 
@@ -56,7 +67,8 @@
   transform: translate(2px, 2px);
 }
 
-.email {
+.email,
+.print {
   cursor: pointer;
   position: absolute;
   display: flex;
@@ -66,16 +78,37 @@
   right: 50px;
 }
 
-.email:active {
+.email {
+  top: 300px;
+}
+
+.print {
+  top: 420px;
+}
+
+.email:active,
+.print:active {
   transform: translate(0, 2px);
 }
 
-.email i {
-  background-color: rgb(255, 165, 0);
+.email i,
+.print i {
   color: white;
   font-size: 30px;
   padding: 20px;
   border-radius: 99999px;
+}
+
+.print i {
+  background-color: rgb(235, 0, 0);
+}
+
+.print i:active {
+  background-color: rgba(235, 0, 0, 0.8);
+}
+
+.email i {
+  background-color: rgb(255, 165, 0);
 }
 
 .email i:active {
@@ -126,7 +159,7 @@
   left: -1920px;
 }
 
-@keyframes loading {
+@keyframes loadingBar {
   0% {
     left: -1920px;
   }
@@ -155,4 +188,328 @@
     top: 27px;
     left: 10px;
   }
+}
+
+.keyboardContainer {
+  position: absolute;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.loadingContainer {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+
+.loadingCircle {
+  position: relative;
+  top: 40px;
+  width: 30px;
+  height: 30px;
+  border: 3px solid white;
+  border-top: 3px solid rgb(255, 166, 2);
+  border-radius: 9999px;
+  animation: loading 1.2s ease-in-out infinite forwards;
+}
+
+@keyframes loading {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.notifContainer {
+  position: absolute;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+
+.notifCard {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 400px;
+  height: 150px;
+  border-radius: 20px;
+}
+
+.notifCard span {
+  color: white;
+  font-size: 28px;
+  letter-spacing: 2px;
+  font-weight: 500;
+}
+
+.inputContainer {
+  position: absolute;
+  top: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 600px;
+  height: 200px;
+  background-color: white;
+}
+
+.inputContainer label {
+  position: absolute;
+  top: 30px;
+  font-size: 30px;
+  letter-spacing: 2px;
+  font-weight: 700;
+}
+
+.printContainer {
+  position: absolute;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.printCard {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  width: 300px;
+  height: 200px;
+}
+
+.printCard h2 {
+  margin-top: 15px;
+}
+
+.printControl {
+  position: relative;
+  left: -20px;
+  margin-top: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.plusMinContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.printControl i {
+  cursor: pointer;
+  font-size: 40px;
+  line-height: 30px;
+}
+
+#minBtn:active {
+  transform: translate(0, 2px);
+}
+
+#plusBtn:active {
+  transform: translate(0, -2px);
+}
+
+.printControl span {
+  width: 100px;
+  height: 50px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  font-weight: 600;
+  margin-left: 20px;
+  line-height: 25px;
+}
+
+#cancelPrintBtn {
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 24px;
+}
+
+#cancelPrintBtn:active {
+  transform: translate(2px, 2px);
+}
+
+#printSubmit {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: rgb(23, 148, 231);
+  color: white;
+  cursor: pointer;
+  padding: 10px 20px;
+  font-size: 20px;
+  font-weight: 600;
+  border: none;
+}
+
+#printSubmit:active {
+  transform: translate(0px, 2px);
+}
+
+.printAlert {
+  position: absolute;
+  z-index: 10;
+  top: -50px;
+  left: 20px;
+  background-color: rgba(67, 67, 255, 1);
+  border-radius: 2px;
+  padding: 5px 30px;
+  color: white;
+}
+
+@keyframes printAlert {
+  0% {
+    top: -50px;
+  }
+  10% {
+    top: 20px;
+  }
+  90% {
+    top: 20px;
+  }
+  100% {
+    top: -50px;
+  }
+}
+
+.use-keyboard-input {
+  width: 500px;
+  padding: 0 20px;
+  margin-top: 30px;
+  border: none;
+  outline: none;
+  border-bottom: 4px solid orange;
+  text-align: center;
+  font-size: 24px;
+}
+
+#cancelBtn {
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 28px;
+}
+
+#cancelBtn:active {
+  transform: translate(2px, 2px);
+}
+
+#sendBtn {
+  cursor: pointer;
+  position: absolute;
+  bottom: -50px;
+  padding: 5px 30px;
+  border: none;
+  font-size: 24px;
+  font-weight: 600;
+  background-color: orange;
+  color: white;
+}
+
+#sendBtn:active {
+  transform: translate(0, 2px);
+}
+
+.keyboard {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 5px 0;
+  background: #2b40c7;
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+  user-select: none;
+  transition: bottom 0.4s;
+}
+
+.keyboard--hidden {
+  bottom: -100%;
+}
+
+.keyboard__keys {
+  text-align: center;
+}
+
+.keyboard__key {
+  height: 45px;
+  width: 6%;
+  max-width: 90px;
+  margin: 3px;
+  border-radius: 4px;
+  border: none;
+  background: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  font-size: 1.05rem;
+  outline: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: top;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent;
+  position: relative;
+}
+
+.keyboard__key:active {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.keyboard__key--wide {
+  width: 12%;
+  max-width: 150px;
+}
+
+.keyboard__key--extra-wide {
+  width: 36%;
+  max-width: 500px;
+}
+
+.keyboard__key--activatable::after {
+  content: "";
+  top: 10px;
+  right: 10px;
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 50%;
+}
+
+.keyboard__key--active::after {
+  background: #08ff00;
+}
+
+.keyboard__key--dark {
+  background: rgba(0, 0, 0, 0.25);
 }
